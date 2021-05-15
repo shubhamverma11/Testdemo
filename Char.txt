@@ -1,0 +1,29 @@
+
+public class CharInput {
+
+	private char t;
+
+	public char getT() {
+		return t;
+	}
+
+	public void setT(char t) {
+		this.t = t;
+	}
+	
+	public void convert(char ch) {
+		int ascii = (int) ch;
+		System.out.println("ASCII value of " + ch + " is: " + ascii);
+	}
+}
+
+public class Cal {
+
+	public static void main(String[] args) {
+
+		CharInput ch = new CharInput();
+		ch.setT(a);
+		ch.convert(ch.getT());
+	}
+
+}

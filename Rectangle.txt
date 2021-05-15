@@ -1,0 +1,39 @@
+
+public class Rectangle {
+	
+	private double length;
+	private double breadth;
+	
+	public double getLength() {
+		return length;
+	}
+
+	public void setLength(double length) {
+		this.length = length;
+	}
+
+	public double getBreadth() {
+		return breadth;
+	}
+
+	public void setBreadth(double breadth) {
+		this.breadth = breadth;
+	}	
+	
+	public void Area_rect(double l, double b) {
+		double area_of_rect =  l*b;
+		System.out.println("Area of rectangle: "+area_of_rect);
+	}
+}
+
+public class Area_of_rect {
+	
+	public static void main(String[] args) {
+		
+		Rectangle rect = new Rectangle();
+		rect.setLength(4);
+		rect.setBreadth(3);
+		rect.Area_rect(rect.getLength(), rect.getBreadth());
+	}
+
+}

@@ -1,0 +1,70 @@
+public class Bank {
+	
+	private String name_of_depo;
+	private int account_no;
+	private String type_of_acc;
+	private int account_bal;
+	
+	public String getName_of_depo() {
+		return name_of_depo;
+	}
+	public void setName_of_depo(String name_of_depo) {
+		this.name_of_depo = name_of_depo;
+	}
+	public int getAccount_no() {
+		return account_no;
+	}
+	public void setAccount_no(int account_no) {
+		this.account_no = account_no;
+	}
+	public String getType_of_acc() {
+		return type_of_acc;
+	}
+	public void setType_of_acc(String type_of_acc) {
+		this.type_of_acc = type_of_acc;
+	}
+	public int getAccount_bal() {
+		return account_bal;
+	}
+	public void setAccount_bal(int account_bal) {
+		this.account_bal = account_bal;
+	}
+	
+	public void withdraw(String name,int bal, int amt) {
+		int res = bal-amt;
+		System.out.println("Balance after withdrawal for for name "+ name +" is "+ res);
+	}
+	
+	public void display_bal(String name, int bal) {
+		System.out.println("Balance for name "+ name +" is "+ bal);
+	}
+	
+	public void getData() {
+		name_of_depo = "Shubham";
+		type_of_acc = "Savings";
+		account_no = 1234;
+	}
+	
+	public void deposit() {
+		account_bal = 500000;
+		System.out.println("Balance after deposit for name "+ name_of_depo +" and account number " +account_no+" is "+ account_bal);
+	}
+	
+}
+
+public class Cal {
+
+	public static void main(String[] args) {
+	
+		Bank b = new Bank();
+		
+		b.getData();
+		
+		b.deposit();
+		
+		b.withdraw(b.getName_of_depo(),b.getAccount_bal(), 2000);
+		
+		b.display_bal(b.getName_of_depo(),b.getAccount_bal());		
+	}
+
+}
